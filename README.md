@@ -1,4 +1,4 @@
-# Sistema-de-Buscas-Imobiliario
+# Sistema de Busca Imobiliário
 Este é um sistema de buscas imobiliárias em PHP para buscar e gravar os dados entre as páginas.
 
 # Imagem da busca
