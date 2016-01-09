@@ -26,10 +26,10 @@ function redirect()
 {
 	$myinit = 'http://' . $_SERVER["HTTP_HOST"].$_SERVER['REQUEST_URI'];
 	$init 	= array(
-		         'http://google.com.br', 
-	         	 'http://google.com.br/', 
-	         	 'http://google.com.br/index', 
-	         	 'http://google.com.br/index.php', 
+		         'http://new.pier36imoveis.com.br', 
+	         	 'http://new.pier36imoveis.com.br/', 
+	         	 'http://new.pier36imoveis.com.br/index', 
+	         	 'http://new.pier36imoveis.com.br/index.php', 
 	          );
 
 	if(in_array($myinit, $init))
@@ -43,8 +43,8 @@ function redirectBusca()
 {
 	$myinit = 'http://' . $_SERVER["HTTP_HOST"].$_SERVER['REQUEST_URI'];
 	$init 	= array(
-		         'http://google.com.br/busca',
-		         'http://google.com.br/busca/',
+		         'http://new.pier36imoveis.com.br/busca',
+		         'http://new.pier36imoveis.com.br/busca/',
 	          );
 
 	if(in_array($myinit, $init))
@@ -59,6 +59,25 @@ function converter_preco($valor)
 	$valor = (int)$valor;
 	return money_format('%n', $valor);
 }
+
+/**
+ * Carregando as classes com Autoload::loader
+ */
+Autoload::loader(['Acesso', 
+	              'Cidades', 
+	              'Bairros', 
+	              'Categorias', 
+	              'Imoveis', 
+	              'Imovel', 
+	              'Imoveis', 
+	              'UrlAmigavel', 
+	              'Title', 
+	              'FotoImovel', 
+	              'ResultadoBusca',
+	              'Infraestrutura', 
+	              'Caracteristicas', 
+	              'Semelhantes']);
+
 
 /**
  * Instanciando objetos para trabalhar com dados
