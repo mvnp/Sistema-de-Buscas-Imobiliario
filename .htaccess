@@ -13,7 +13,8 @@ RewriteBase /
 
 ##### Enviando um parametro slug para tratamento que vai comparar #####
 ##### o slug dentro do banco de dados através do paramentro enviado ###
-##### e buscar o conteúdo quando tratamento.php for chamado ########### #######################################################################
+##### e buscar o conteúdo quando tratamento.php for chamado ###########
+#######################################################################
 
 # Setando a página de erro
 ErrorDocument 404 /erro.php
