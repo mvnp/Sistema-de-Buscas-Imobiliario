@@ -1,0 +1,28 @@
+Options +FollowSymLinks
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteBase /
+# RewriteRule ^(.*)$ index.php/$1 [L]
+
+# Aqui estou preparando a listagem de todos os artigos e
+# do artigo single. A url está enviando o 'param' para
+# ser comparado com informações do banco de dados
+
+##### Enviando um parametro slug para tratamento que vai comparar #####
+##### o slug dentro do banco de dados através do paramentro enviado ###
+##### e buscar o conteúdo quando tratamento.php for chamado ########### #######################################################################
+
+# Setando a página de erro
+ErrorDocument 404 /erro.php
+
+# Algumas rotas estáticas
+RewriteRule ^home(.*)$ index.php
+RewriteRule ^imovel/(.*)$ imovel.php?param=$1
+RewriteRule ^anuncie$ anuncie.php
+RewriteRule ^busca/(.*)$ busca.php?pagina=$1
+RewriteRule ^imobiliaria$ imobiliaria.php
+RewriteRule ^lancamentos$ busca.php
+RewriteRule ^contato$ contato.php
